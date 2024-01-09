@@ -1,0 +1,188 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="false" %>
+
+<%@ Import Namespace="MailKit.Net.Smtp" %>
+<%@ Import Namespace="MailKit" %>
+<%@ Import Namespace="MimeKit" %>
+
+<script runat="server">
+
+
+
+    protected String GetTime()
+    {
+        return DateTime.Now.ToString("t");
+    }
+
+    protected void SendStmp(string Subject, string Message, string[] To, bool SendInBCC = false)
+    {
+
+
+
+        var message = new MimeMessage();
+        message.From.Add(new MailboxAddress("Joey Tribbiani", "info@mejorconseguros.com"));
+        message.To.Add(new MailboxAddress("Mrs. Chanandler Bong", "d.villalba@scientia.com.ar"));
+        message.Subject = "How you doin'?";
+
+        message.Body = new TextPart("plain")
+        {
+            Text = @"Hey Chandler,
+
+I just wanted to let you know that Monica and I were going to go play some paintball, you in?
+
+-- Joey"
+        };
+
+        using (var client = new SmtpClient())
+        {
+            client.Connect("secure.emailsrvr.com", 465, true);
+
+            // Note: only needed if the SMTP server requires authentication
+            client.Authenticate("info@mejorconseguros.com", "57^Xr$b4TE!!");
+
+            client.Send(message);
+            client.Disconnect(true);
+        }
+
+
+
+        //System.Net.Mail.SmtpClient Smtp = new System.Net.Mail.SmtpClient();
+
+
+        //Smtp.Port = 8025;
+        //Smtp.Port = 465;
+        //Smtp.EnableSsl = false;
+        //Smtp.Credentials = new System.Net.NetworkCredential("dipaola_prod", "G2Qn40Ngv1xGCR+y5t835aMABjEpnRKBO9MkoNZiNCQ=");
+        //Smtp.Credentials = new System.Net.NetworkCredential("info@mejorconseguros.com", "57^Xr$b4TE!!");
+        //Smtp.Timeout = 5000;
+        //Smtp.UseDefaultCredentials = true;
+
+
+        //System.Net.Mail.MailMessage EmailMsg = new System.Net.Mail.MailMessage();
+        //EmailMsg.From = new System.Net.Mail.MailAddress("info@mejorconseguros.com");//dipaola@dipaolalatina.com
+        //System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls
+        //                              | System.Net.SecurityProtocolType.Tls11
+        //                              | System.Net.SecurityProtocolType.Tls12;
+
+        //System.Net.Mail.SmtpClient Smtp = new System.Net.Mail.SmtpClient("secure.emailsrvr.com", 465);
+        //Smtp.EnableSsl = true;
+
+
+
+        //System.Net.Mail.MailMessage EmailMsg = new System.Net.Mail.MailMessage();
+        //EmailMsg.From = new System.Net.Mail.MailAddress("info@mejorconseguros.com");//dipaola@dipaolalatina.com
+        //Smtp.Credentials = new System.Net.NetworkCredential("info@mejorconseguros.com", "57^Xr$b4TE!!");
+
+
+
+        //try
+        //{
+        //    if (SendInBCC)
+        //        foreach (string sTo in To)
+        //            EmailMsg.Bcc.Add(sTo);
+        //    else
+        //        foreach (string sTo in To)
+        //            EmailMsg.To.Add(sTo);
+        //    EmailMsg.Subject = Subject;
+
+        //    EmailMsg.Body = Message;
+        //    EmailMsg.IsBodyHtml = true;
+        //    EmailMsg.BodyEncoding = System.Text.Encoding.UTF8;
+
+        //    Smtp.Send(EmailMsg);
+
+
+        //}
+        //catch (System.Net.Mail.SmtpException ex)
+        //{
+
+
+        //    string msg = "Correo no enviado debido a un problema en el servidor:\n";
+        //    msg += ex.Message;
+        //    msg += "\n\nError msg:\n" + ex;
+        //    msg += "\n\nStack trace:\n" + ex.StackTrace;
+        //    DisplayMessage.Text = msg;
+        //    DisplayMessage.Visible = true;
+
+
+        //}
+        //catch (Exception ex)
+        //{
+        //    string msg = "Correo no enviado debido a un problema en el servidor:\n";
+        //    msg += ex.Message;
+        //    msg += "\n\nError msg:\n" + ex;
+        //    msg += "\n\nStack trace:\n" + ex.StackTrace;
+        //    DisplayMessage.Text = msg;
+        //    DisplayMessage.Visible = true;
+        //}
+    }
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            //here on button click what will done 
+            //SendMail();
+            string[] MailTo = txtEmail.Text.ToString().Split(';');
+            SendStmp(txtSubject.Text, txtCuerpo.Text, MailTo);
+            //DisplayMessage.Text = "El Correo se ha enviado";
+            DisplayMessage.Visible = true;
+            txtSubject.Text = "";
+            txtEmail.Text = "";
+            //txtNombre.Text = "";
+            txtCuerpo.Text = "";
+
+        }
+        catch (Exception ex)
+        {
+
+            string msg = "Error el Enviar Correo:\n";
+            msg += ex.Message;
+            msg += "\n\nError msg:\n" + ex;
+            msg += "\n\nStack trace:\n" + ex.StackTrace;
+
+            DisplayMessage.Text = msg;
+            DisplayMessage.Visible = true;
+        }
+    }
+
+</script>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>!</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            Hora Actual: <% =GetTime()%>.
+        
+    <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSubmit">
+        <p>
+            Complete los siguientes campos para enviar el Mail.
+        </p>
+        <p>
+            Direccion de Email:
+            <br />
+            <asp:TextBox ID="txtEmail" runat="server" Width="250px" required />
+            <br />
+            Subject:
+            <br />
+            <asp:TextBox ID="txtSubject" runat="server" Width="400px" required /><br />
+            Cuerpo:
+            <br />
+            <asp:TextBox ID="txtCuerpo" runat="server" TextMode="MultiLine" Rows="10" Width="400px" required />
+        </p>
+        <p>
+            <asp:Button ID="btnSubmit" runat="server" Text="Send" OnClick="Button1_Click" />
+        </p>
+    </asp:Panel>
+            <pre>
+        <asp:Literal ID="DisplayMessage" runat="server" Visible="false" Text="El correo se ha enviado!" />
+    </pre>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,158 @@
+﻿:root {
+    --bs-info: #0dcaf0;
+}
+
+@font-face {
+    font-family: 'Cera bold';
+    src: url("../../fonts/cera-bold.otf");
+}
+
+
+body {
+}
+
+#header {
+    grid-area: image-header-area;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "titulo-area";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    background-color: var(--bs-info);
+}
+
+    #header #logo {
+        width: 0;
+        height: 0;
+    }
+
+    #header #titulo {
+        grid-area: titulo-area;
+        align-self: center;
+        justify-self: center;
+        font-family: 'Cera bold';
+        color: white;
+        font-size: 200%;
+    }
+
+#loginpannel {
+    grid-area: login-container-area;
+    display: grid;
+    grid-template-areas:
+        "username-area"
+        "password-area"
+        "button-area"
+        "errmsg-area";
+    margin: 10px 0;
+}
+
+    #loginpannel > * {
+        align-self: center;
+        justify-self: center;
+    }
+
+    #loginpannel #txtUserName {
+        grid-area: username-area;
+    }
+
+    #loginpannel #txtUserPass {
+        grid-area: password-area;
+    }
+
+    #loginpannel #cmdLogin {
+        grid-area: button-area;
+    }
+
+    #loginpannel #lblMsg {
+        grid-area: errmsg-area;
+    }
+.login .input-group {
+    flex-direction: column;
+}
+
+
+.login .input-group .form-group {
+    margin-bottom:12px;
+}
+
+#footer {
+    grid-area: footer-area;
+}
+
+
+
+
+#recoverypannel {
+    grid-area: login-container-area;
+    display: grid;
+    grid-template-areas:
+        "username-area"
+        "button-area"
+        "errmsg-area";
+    margin: 10px 0;
+}
+
+    #recoverypannel > * {
+        align-self: center;
+        justify-self: center;
+    }
+
+    #recoverypannel #txtUserName {
+        grid-area: username-area;
+    }
+
+    #recoverypannel #txtUserPass {
+        grid-area: password-area;
+    }
+
+    #recoverypannel #cmdLogin {
+        grid-area: button-area;
+    }
+
+    #recoverypannel #lblMsg {
+        grid-area: errmsg-area;
+    }
+
+
+
+
+
+
+
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        "image-header-area"
+        "login-container-area"
+        "footer-area";
+    grid-template-rows: 100px auto 100px;
+    grid-template-columns: auto;
+}
+
+
+@media(min-width: 600px) {
+
+
+
+    #header {
+        grid-template-areas:
+            "logo-area titulo-area";
+        grid-template-columns: 20% auto;
+    }
+
+
+
+        #header #logo {
+            background-image: url("../../images/logo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            grid-area: logo-area;
+            width: 80%;
+            height: 80%;
+            max-width: 202px;
+            align-self: center;
+            justify-self: center;
+        }
+}

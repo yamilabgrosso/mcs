@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  https://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+
+
+
+
+
+	<configSections>
+		<section name="log4net" type="log4net.config.Log4NetConfigurationSectionHandler, log4net" />
+	</configSections>
+	<connectionStrings>
+		<clear />
+		<add name="Varilux.Web.Properties.Settings.Database" connectionString="Data Source=mssql1202\inst2;Initial Catalog=2039879_mcs_db;Integrated Security=False;User ID=2039879_mejor_seguros;Connect Timeout=30;Encrypt=False;Packet Size=4096;Password=7u!ATRaMm4JxKnE" />
+	</connectionStrings>
+	<log4net>
+		<appender name="GeneralAppender" type="log4net.Appender.RollingFileAppender">
+			<file value="App_Data\Logs\general.txt" />
+			<appendToFile value="true" />
+			<rollingStyle value="Composite" />
+			<datePattern value="yyyyMMdd" />
+			<maxSizeRollBackups value="30" />
+			<maximumFileSize value="100MB" />
+			<lockingModel type="log4net.Appender.FileAppender+InterProcessLock" />
+			<layout type="log4net.Layout.PatternLayout">
+				<conversionPattern value="%-5level %date %logger [%property{NDC}] - %message%newline" />
+			</layout>
+		</appender>
+		<appender name="SchedulerAppender" type="log4net.Appender.RollingFileAppender">
+			<file value="App_Data\Logs\scheduler.txt" />
+			<appendToFile value="true" />
+			<rollingStyle value="Composite" />
+			<datePattern value="yyyyMMdd" />
+			<maxSizeRollBackups value="30" />
+			<maximumFileSize value="100MB" />
+			<lockingModel type="log4net.Appender.FileAppender+InterProcessLock" />
+			<layout type="log4net.Layout.PatternLayout">
+				<conversionPattern value="%-5level %date %logger [%property{NDC}] - %message%newline" />
+			</layout>
+		</appender>
+		<root>
+			<level value="DEBUG" />
+			<appender-ref ref="GeneralAppender" />
+		</root>
+		<logger name="Scheduler">
+			<level value="ALL" />
+			<appender-ref ref="SchedulerAppender" />
+		</logger>
+	</log4net>
+	<system.net>
+		<mailSettings>
+			<smtp deliveryMethod="Network" from="info@mejorconseguros.com">
+				<network host="secure.emailsrvr.com" port="25" userName="info@mejorconseguros.com" password="57^Xr$b4TE!!" defaultCredentials="false" enableSsl="false" />
+			</smtp>
+		</mailSettings>
+	</system.net>
+	<system.web>
+		<trust level="Full" />
+		<customErrors mode="Off"/>
+		<authentication mode="Forms">
+			<forms loginUrl="/admin/login.aspx" timeout="1440" name="XX" slidingExpiration="true" />
+		</authentication>
+		<membership defaultProvider="LSMembershipProvider">
+			<providers>
+				<clear />
+				<add name="LSMembershipProvider" type="LasSuperadoras.Security.LSMembershipProvider" />
+			</providers>
+		</membership>
+		<roleManager enabled="true" defaultProvider="LSRoleProvider">
+			<providers>
+				<clear />
+				<add name="LSRoleProvider" type="LasSuperadoras.Security.LSRoleProvider" />
+			</providers>
+		</roleManager>
+		<compilation targetFramework="4.8" />
+		<httpRuntime targetFramework="4.8" />
+		<pages>
+			<namespaces>
+				<add namespace="System.Web.Optimization" />
+			</namespaces>
+			<controls>
+				<add assembly="Microsoft.AspNet.Web.Optimization.WebForms" namespace="Microsoft.AspNet.Web.Optimization.WebForms" tagPrefix="webopt" />
+				<add tagPrefix="LasSuperadoras" tagName="UpperMenu" src="~/UserControl/UpperMenu.ascx" />
+				<add tagPrefix="LasSuperadoras" tagName="PopupModal" src="~/UserControl/PopupModal.ascx" />
+				<add tagPrefix="LasSuperadoras" tagName="Footer" src="~/UserControl/Footer.ascx" />
+			</controls>
+		</pages>
+	</system.web>
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="false" />
+		<handlers>
+			<remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+			<remove name="OPTIONSVerbHandler" />
+			<remove name="TRACEVerbHandler" />
+			<add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+		</handlers>
+		<defaultDocument enabled="true">
+			<files>
+				<clear />
+				<add value="inicio" />
+				<add value="default.aspx" />
+			</files>
+		</defaultDocument>
+
+		<!--<rewrite>
+			<rules>
+				<rule name="Inicio">
+					<match url="Inicio" />
+					<action type="Rewrite" url="Default.aspx" />
+				</rule>
+				<rule name="setpassw">
+					<match url="Admin/NuevaContrasenia/([_0-9a-z-]+)" />
+					<action type="Rewrite" url="Admin/SetPassword.aspx/{R:1}" />
+				</rule>
+				<rule name="setpassw2">
+					<match url="Admin/NuevaContrasenia" />
+					<action type="Rewrite" url="Admin/SetPassword.aspx" />
+				</rule>			
+		
+			</rules>
+		</rewrite>-->
+
+	</system.webServer>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="Antlr3.Runtime" publicKeyToken="eb42632606e9261f" />
+				<bindingRedirect oldVersion="0.0.0.0-3.5.0.2" newVersion="3.5.0.2" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" />
+				<bindingRedirect oldVersion="0.0.0.0-12.0.0.0" newVersion="12.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="0.0.0.0-1.6.5135.21930" newVersion="1.6.5135.21930" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" publicKeyToken="b03f5f7f11d50a3a" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="BouncyCastle.Crypto" publicKeyToken="0e99375e54769942" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-1.9.0.0" newVersion="1.9.0.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+	<location path="Admin/Users.aspx">
+		<system.web>
+			<authorization>
+				<allow roles="Admin" />
+				<deny users="?" />
+				<deny users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin/Login.aspx">
+		<system.web>
+			<authorization>
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin">
+		<system.web>
+			<authorization>
+				<deny users="?" />
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin/SetPassword.aspx">
+		<system.web>
+			<authorization>
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin/SetContrasenia">
+		<system.web>
+			<authorization>
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin/RecoverPassword.aspx">
+		<system.web>
+			<authorization>
+				<allow users="?" />
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin/RecuperarContrasenia">
+		<system.web>
+			<authorization>
+				<allow users="?" />
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+	<location path="Admin/NuevaContrasenia">
+		<system.web>
+			<authorization>
+				<allow users="?" />
+				<allow users="*" />
+			</authorization>
+		</system.web>
+	</location>
+</configuration>
+<!--ProjectGuid: 915AA700-1601-4B3A-838F-BEF9BA1CC0BA-->

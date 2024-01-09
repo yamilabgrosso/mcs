@@ -1,0 +1,1263 @@
+@font-face {
+    font-family: 'Cera medium';
+    src: url("fonts/cera-medium.otf");
+}
+
+@font-face {
+    font-family: 'Cera bold';
+    src: url("fonts/cera-bold.otf");
+}
+
+
+@font-face {
+    font-family: 'Cera pro';
+    src: url("fonts/cera-pro-bold.otf");
+}
+
+@font-face {
+    font-family: 'Cera pro black';
+    src: url("fonts/cera-pro-black.otf");
+}
+
+* {
+    font-family: "Cera medium";
+}
+
+body {
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+nav {
+    background-color: #3bbded;
+
+}
+
+nav div {
+    padding-top: 20px;
+    padding-left: 3% !important;
+}
+
+nav hr {
+    margin: 0rem 0;
+    border: 2px solid white;
+    opacity: 1;
+}
+
+.menu {
+    justify-content: end;
+    width: 100%;
+    align-items: center;
+    --bs-nav-link-hover-color: #ffffff;
+    z-index: 99;
+}
+
+.menu a {
+    color: rgb(246, 242, 242);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 20px;
+    padding-bottom: 5px;
+}
+
+.menu a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.menu .bg-celeste {
+    background-color: #3bbcec;
+    --bs-dropdown-link-hover-bg: #05aef1;
+}
+
+.menu .bg-celeste li:hover {
+    background-color: #05aef1;
+}
+
+.navbar-toggler-icon {
+    background-image: url(Images/btn-hamburguesa.png);
+}
+
+.navbar-toggler {
+    color: rgb(255 255 255 / 65%);
+    border: solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+}
+
+.flex-c-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-c-start {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.modal {
+    color: #606060;
+}
+
+.modal hr {
+    color: #2535C3;
+    border: 1px solid;
+    opacity: 1;
+    width: 70%;
+}
+
+.modal h2 {
+    color: #2535C3;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 1rem 5rem;
+}
+
+.modal-body .logoModal {
+    width: 20%;
+}
+
+
+.modal-body .iconoModal {
+    width: 5%;
+}
+
+.closeModal {
+    background-image: url(Images/cerrar-modal.png);
+    --bs-btn-close-bg: url(Images/cerrar-modal.png);
+    background-size: contain;
+    width: 5rem;
+    --bs-btn-close-focus-shadow: none;
+    opacity: 1;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal .button-loquiero {
+    margin: 2% auto;
+    width: 132px;
+}
+
+.modal button a {
+    text-decoration: none;
+}
+
+.type-orange {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #e58239;
+    border-color: #e58239;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    padding: 0.270rem 0.65rem;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #ff6a00;
+    --bs-btn-active-border-color: #ffc720;
+    --bs-btn-active-shadow: inset 0 5px 7px rgba(0, 0, 0, 0.125);
+}
+
+.type-orange:hover {
+    color: #ffffff;
+    background-color: #ff6a00;
+}
+
+
+/* Index */
+
+.bodyIndex {
+    background-color: #3BBDED;
+}
+
+.mainIndex {
+    background-color: #41bced;
+}
+
+.waveIndex {
+    width: 100%;
+    padding: 4% 0px 6% 0px;
+    background-image: url(Images/wave-new-2.png);
+    background-size: cover;
+}
+
+.waveIndexMedio {
+    position: relative;
+}
+
+.waveIndexMedio img {
+    position: absolute;
+    bottom: -11px;
+    width: 100%;
+    transform: translate(0px, -8px);
+
+}
+
+
+.inicial {
+    padding: 0 10% 8% 10%;
+    display: flex;
+}
+
+.inicialMarcas {
+    padding: 0 10% 2% 10%;
+
+}
+
+.inicial h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+
+.inicial .super {
+    font-size: 1.6em;
+}
+
+.inicial .las {
+    padding: 0 15px;
+}
+
+.inicial .superadoras-m {
+    font-size: 1.6em;
+    font-family: "Cera pro black";
+
+}
+
+.inicial .seguros-m {
+    padding: 0px;
+    font-family: "Cera medium";
+    font-weight: 400;
+}
+
+
+.chicaConCapa-index {
+    position: relative;
+    width: 100%;
+}
+
+.chicaConCapa-index img {
+    position: absolute;
+    width: 100%;
+    right: 16%;
+    top: 50%;
+    transform: translate(-16%, -50%);
+}
+
+.segurasseguro-index {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 999;
+    width: 50%;
+    padding-bottom: 3%;
+}
+
+
+.chicaConCapa {
+    position: relative;
+    width: 50%;
+}
+
+.chicaConCapa img {
+    position: absolute;
+    width: 119%;
+    right: -8%;
+    top: 57%;
+    transform: translate(-16%, -50%);
+}
+
+.segurasseguro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    width: 59%;
+    padding-bottom: 0%;
+    padding-top: 5%;
+}
+
+
+.segurasseguro div p {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.segurasseguro .text-marcas {
+    font-size: 22px;
+    padding: 5% 13% 0% 13%;
+    text-align: center;
+}
+
+.todasLasMarcas {
+    background-color: #53c0ee;
+    position: relative;
+    z-index: 99;
+    padding-bottom: 7%;
+
+}
+
+main .marcas {
+    padding: 0 10%;
+}
+
+main .marcas img {
+    width: 50%
+}
+
+.masInfo {
+    cursor: pointer;
+}
+
+.ofrecimientoXMarca {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 60px;
+    column-gap: 20px;
+    padding: 5% 10%;
+}
+
+.cardMarca {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cardMarcaTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 13px;
+}
+
+.cardMarcaTitulo img {
+    padding: 2px;
+}
+
+
+.simuladorSeguros {
+    padding-top: 17%;
+}
+
+.simuladorSeguros h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.grupoCardsSimuladorSeguros {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    flex-wrap: wrap;
+}
+
+.grupoCardsSimuladorSeguros a {
+    text-decoration: none;
+}
+
+.cardSimuladorSeguros {
+    width: 14rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    box-shadow: 5px 9px 8px 1px #3c3a3a8f;
+    padding: 20px;
+    margin: 10px;
+    background-color: #00409C;
+    transition: 1s all;
+}
+
+.cardSimuladorSeguros:hover {
+    box-shadow: 8px 11px 12px 1px #3c3a3a8f;
+
+
+}
+
+
+
+/* .cardSimuladorSeguros .tildeOk {
+    display: none;
+}
+
+.click {
+    background-color: #2535C3;
+    position: relative;
+    transition-property: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+
+.click .tildeOk {
+    display: block;
+    position: absolute;
+    top: -18px;
+    right: -10px;
+} */
+
+.cardSimuladorSeguros div {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardSimuladorSeguros img {
+    width: 80%;
+}
+
+
+
+.cardSimuladorSeguros h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.cardSimuladorSeguros h3 {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0px 0 10px 0;
+    height: 60px;
+}
+
+.cardSimuladorSeguros p {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 6px 12px;
+    font-weight: 700;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background-color: #0053f7;
+}
+
+.cardSimuladorSeguros hr {
+    margin-top: 0;
+    opacity: 1;
+    height: 5px;
+    width: 73%;
+    background-color: #ffffff;
+}
+
+
+.cardSimuladorResultadoP {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.cardSimuladorResultado {
+    background-color: #ffffff;
+    width: 20rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardSimuladorResultado p {
+    font-size: 4rem;
+    color: #e58239;
+    font-weight: 900;
+    margin: 0;
+}
+
+.cardSimuladorResultadoP .fs-lg {
+    font-size: 21px;
+}
+
+.cardSimuladorResultadoP h3 {
+    font-size: 24px;
+    padding: 30px;
+    text-align: center;
+}
+
+.waveIndexFin img {
+    position: absolute;
+
+}
+
+.formulario {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(65, 188, 237);
+    background: -moz-linear-gradient(0deg, rgba(65, 188, 237, 1) 0%, rgba(83, 192, 238, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(65, 188, 237, 1) 0%, rgba(83, 192, 238, 1) 100%);
+    background: linear-gradient(0deg, rgba(65, 188, 237, 1) 0%, rgba(83, 192, 238, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#41bced", endColorstr="#53c0ee", GradientType=1);
+    padding-bottom: 5%;
+}
+
+
+.formulario p {
+    text-align: center;
+    padding: 0 10px 20px 10px;
+}
+
+
+.formulario form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 70%;
+    align-items: self-end;
+}
+
+.fs-lg {
+    width: 40%;
+    align-self: end;
+    justify-self: center;
+    margin-bottom: 12px;
+}
+
+.type-blue {
+    background-color: #3641D0;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 8px 30px;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+
+.type-blue:hover,
+.type-blue:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+    -webkit-transform: translateY(-0.25em);
+    transform: translateY(-0.25em);
+    color: #fff;
+    background-color: #3641D0;
+}
+
+
+
+
+
+
+.form-check-input:checked {
+    background-color: #e58239;
+    border-color: #cf7634;
+}
+
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.form-select:focus {
+    box-shadow: none !important;
+}
+
+.form-check-input {
+    background-color: #ffffff00;
+}
+
+.fondoIcoFin {
+    position: relative;
+    width: 50%;
+}
+
+.fondoIcoFin img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Preguntas */
+
+.preguntas {
+    background-color: #3BBDED;
+}
+
+
+.mainPreguntas {
+    width: 100%;
+    padding: 8% 0px;
+    background-image: url(Images/wave.svg);
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.accordionPadre {
+    padding: 40px;
+    background-color: #0053f7;
+}
+
+.accordion {
+    width: 70%;
+    --bs-accordion-border-radius: 1.5rem;
+
+}
+
+.accordion-button::after {
+    background-image: url(Images/btn-mas.png);
+    transition: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(Images/btn-menos.png);
+    transition: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #00409C;
+    font-weight: 700;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: #ffffff;
+    box-shadow: none;
+}
+
+.accordion-button {
+    color: #00409C;
+    font-weight: 700;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+
+}
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-item hr {
+    margin: 0 auto;
+    opacity: 1;
+    width: 90%;
+
+}
+
+.mainPreguntas .sectionPreguntas hr {
+    color: #e58239;
+    width: 42%;
+    opacity: 1;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.mainPreguntas h1 {
+    text-align: center;
+}
+
+.mainPreguntas .frecuentes {
+    font-size: 4rem;
+    line-height: 0;
+}
+
+
+/* Proposito */
+
+.waveProposito {
+    width: 100%;
+    padding: 4% 0px 10% 0px;
+    background-image: url(Images/waveprop_02.png);
+    background-size: cover;
+}
+
+.mainProposito {
+    background-color: #2535c3;
+    padding: 0 10% 4% 10%;
+    display: flex;
+}
+
+.mainProposito .sectionProposito hr {
+    color: #e58239;
+    width: 15%;
+    opacity: 1;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.mainProposito h1 {
+    text-align: start;
+}
+
+.sectionProposito {
+    width: 50%;
+    z-index: 99;
+    padding-bottom: 20px;
+}
+
+.mainProposito .nuestroText {
+    font-size: 2em;
+}
+
+.mainProposito .propositoText {
+    font-size: 7rem;
+    line-height: 0.6;
+}
+
+.mainProposito .redes p {
+    margin: 0;
+
+}
+
+.mainProposito img {
+    padding: 0 5px;
+}
+
+.mainProposito .flecha-aqui {
+    padding: 0;
+}
+
+.mujerFrente {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.mujerFrente img {
+    position: absolute;
+    bottom: 6%;
+    width: 77%;
+    max-width: 480px;
+}
+
+.wavePropositoFinal {
+    position: relative;
+}
+
+.wavePropositoFinal img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+/* Equipo */
+
+.bodyEquipo {
+    background-color: #2535c3;
+}
+
+.waveEquipo {
+    width: 100%;
+    padding: 4% 0px 10% 0px;
+    background-image: url(Images/wave-equipo.png);
+    background-size: cover;
+}
+
+
+.navEquipo {
+    background-color: #2535C3;
+}
+
+.mainEquipo {
+    background-color: #0053f7;
+    padding: 0 10% 10% 10%;
+    display: flex;
+}
+
+
+.sectionEquipo {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.mainEquipo .sectionEquipo hr {
+    color: #e58239;
+    width: 30%;
+    opacity: 1;
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.mainEquipo .sectionEquipo .nuestroText {
+    font-size: 5rem;
+}
+
+.mainEquipo .sectionEquipo .equipoText {
+    font-size: 7rem;
+    line-height: 64px;
+}
+
+.sectionEquipo img {
+    width: 50%;
+}
+
+.waveEquipoFinal {
+    position: relative;
+}
+
+.waveEquipoFinal img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 5%;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #2535C3;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    padding: 20px;
+}
+
+footer .footerMarca{
+    padding: 35px 15;
+    width: 60%;
+}
+
+.gracias-ty {
+    background-color: #5fc3ef;
+}
+
+
+.waveGracias {
+    padding: 2% 0px 6% 0px;
+}
+.gracias-ty main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gracias-ty main h1 {
+    font-size: 50px;
+    font-family: "Cera pro black";
+    padding-top: 5%;
+}
+
+.gracias-ty main p {
+    font-size: 23px;
+    text-align: center;
+}
+
+.gracias-ty .title{
+    font-size: 25px;
+    font-family: "Cera pro black";
+}
+
+.gracias-ty .info {
+    font-size: 20px;
+    text-align: center;
+    color: #3641D0;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+.gracias-ty section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px 0;
+    align-items: center;
+    justify-items: center;
+}
+
+.gracias-ty section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: #0000002b;
+    border-radius: 5px;
+    padding: 20px;
+    height: 250px;
+}
+
+.gracias-ty a{
+    text-decoration: none;
+}
+
+.marcaSeguro {
+    display: flex;
+    justify-content: center;
+}
+
+.ofrecimientoXMarca-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding-bottom: 20px;
+}
+
+.ofrecimientoXMarca-page h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Cera pro black";
+}
+
+
+.ofrecimientoXMarca-page h2 {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Cera pro black";
+    font-size: 25px;
+
+
+}
+
+.ofrecimientoXMarca-page p {
+    text-align: center;
+    padding: 0px 5%;
+    font-size: 20px;
+}
+
+.ofrecimientoXMarca-page .info {
+    color: #3641D0;
+    margin: 0;
+    padding-bottom: 6px;
+    cursor: pointer;
+}
+
+.b-gradiente {
+    width: 50%;
+    border: 1px solid transparent;
+    border-image: -moz-linear-gradient(81deg, rgba(65, 188, 237, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 22%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 77%, rgba(65, 188, 237, 1) 100%);
+    border-image: -webkit-linear-gradient(81deg, rgba(65, 188, 237, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 22%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 77%, rgba(65, 188, 237, 1) 100%);
+    border-image: linear-gradient(81deg, rgba(65, 188, 237, 1) 0%, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 1) 22%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 77%, rgba(65, 188, 237, 1) 100%);
+    border-image-slice: 1;
+    opacity: 1;
+    margin: 1px;
+}
+
+
+.ofrecimientoXMarca-page .precio {
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    font-size: 20px;
+}
+
+.ofrecimientoXMarca-page .precio .number {
+    font-size: 30px;
+    color: #3641D0;
+}
+
+.waveIndexForm {
+    padding: 0% 0px 6% 0px;
+}
+
+.logoPrincipal {
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+
+    .segurasseguro h1 {
+        font-size: 1.6em;
+    }
+
+    .segurasseguro div p {
+        font-size: 18px;
+    }
+
+    .segurasseguro .text-marcas {
+        font-size: 19px;
+        padding: 5% 5% 0% 5%;
+    }
+
+    .ofrecimientoXMarca {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main .marcas img {
+        width: 75%;
+    }
+
+    .mainPreguntas {
+        padding: 40px 0px;
+    }
+
+    .chicaConCapa img {
+        width: 155%;
+        right: -23%;
+        transform: translate(-17%, -50%);
+        top: 47%;
+    }
+
+    .chicaConCapa-index img {
+        width: 155%;
+        right: -23%;
+        transform: translate(-17%, -50%);
+    }
+
+    .mujerFrente img {
+        width: 90%;
+        bottom: 2%;
+    }
+
+    .mainEquipo .sectionEquipo .nuestroText {
+        font-size: 4rem;
+    }
+
+    .mainEquipo .sectionEquipo .equipoText {
+        font-size: 5rem;
+        line-height: 35px;
+    }
+
+    .sectionPreguntas div {
+        padding-bottom: 50px;
+    }
+
+    .mainPreguntas .frecuentes {
+        font-size: 3rem;
+    }
+
+    .mainProposito .nuestroText {
+        font-size: 1.5em;
+    }
+
+    .mainProposito .propositoText {
+        font-size: 5rem;
+    }
+
+    .modal-body .logoModal {
+        width: 40%;
+    }
+
+
+    .modal-body .iconoModal {
+        width: 8%;
+    }
+
+    .formulario form {
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .ofrecimientoXMarca-page {
+        width: 60%;
+    }
+
+    footer .footerMarca{
+        width: 65%;
+    }
+    
+
+}
+
+@media (max-width: 850px) {
+
+    .chicaConCapa img {
+        width: 180%;
+        right: -30%;
+        transform: translate(-17%, -50%);
+        top: 57%;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .ofrecimientoXMarca {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .chicaConCapa {
+        display: none;
+    }
+
+    .chicaConCapa-index {
+        display: none;
+    }
+
+    .mainPreguntas {
+        padding: 0px 0px;
+    }
+
+    .imgFondoIcoIndex {
+        display: none;
+    }
+
+    main .marcas img {
+        width: 100%;
+    }
+
+    .mujerFrente {
+        display: none;
+    }
+
+    .accordionPadre {
+        padding: 60px 0;
+    }
+
+    .sectionEquipo {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sectionEquipo img {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .mainEquipo .sectionEquipo hr {
+        width: 100%;
+    }
+
+    .mainEquipo .sectionEquipo .nuestroText {
+        font-size: 2rem;
+    }
+
+    .mainEquipo .sectionEquipo .equipoText {
+        font-size: 3rem;
+    }
+
+    .mainEquipo .sectionEquipo h1 {
+        text-align: center;
+    }
+
+    .sectionPreguntas div {
+        padding: 50px 0 30px 0;
+    }
+
+    .sectionProposito {
+        width: 100%;
+    }
+
+    .mainProposito .nuestroText {
+        font-size: 1em;
+    }
+
+    .mainProposito .propositoText {
+        font-size: 3rem;
+    }
+
+
+    .segurasseguro {
+        width: 100%;
+    }
+
+    .segurasseguro-index {
+        width: 100%;
+    }
+
+
+    .simuladorSeguros h2 {
+        font-size: 2.2rem;
+        padding: 0 5px;
+    }
+
+    .modal-body {
+        padding: 1rem 1rem;
+    }
+
+    .ofrecimientoXMarca-page {
+        width: 70%;
+    }
+
+    .ofrecimientoXMarca-page p {
+        padding: 0px 0%;
+        font-size: 19px;
+    }
+
+    .ofrecimientoXMarca-page .precio {
+        font-size: 16px;
+    }
+
+    .gracias-ty section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 20px 0;
+    }
+
+    footer .footerMarca{
+        width: 100%;
+    }
+    
+    .segurasseguro .text-marcas {
+        padding: 5% 5% 5% 5%;
+    }
+}
+
+@media (max-width: 420px) {
+
+
+    .inicial h1 {
+        font-size: 1.6em;
+        line-height: 28px;
+    }
+
+    main .marcas {
+        padding: 0 3%;
+    }
+
+    .cardMarca {
+        width: 14rem;
+    }
+
+    .simuladorSeguros h2 {
+        font-size: 1.6rem;
+        padding: 0 10px;
+    }
+
+    .cardSimuladorResultado {
+        width: 15rem;
+    }
+
+    .formulario {
+        padding: 7% 0 3% 0%;
+    }
+
+    .fondoIcoFin {
+        display: none;
+    }
+
+    .mainEquipo {
+        height: 30rem;
+    }
+
+    .gracias-ty main h1 {
+        font-size: 40px;
+    }
+
+    .gracias-ty main p {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .ofrecimientoXMarca-page {
+        width: 90%;
+    }
+
+
+}

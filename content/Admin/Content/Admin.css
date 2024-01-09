@@ -1,0 +1,126 @@
+﻿:root {
+    --bs-info: #0dcaf0;
+}
+
+div {
+    display: grid;
+}
+
+@font-face {
+    font-family: 'Cera bold';
+    src: url("../../fonts/cera-bold.otf");
+}
+
+#grid-container {
+    font-family: 'Cera bold';
+    display: grid !important;
+    grid-template-areas:
+        "adminmenu-area"
+        "adminbody-area";
+    gap: 20px;
+}
+
+#adminheader {
+    grid-area: adminmenu-area;
+    background-color: var(--bs-info);
+    padding-right: 10px;
+    text-align: right;
+}
+
+#admincontent {
+    grid-area: adminbody-area;
+}
+
+#adminheader a {
+    color: white;
+    text-decoration: none;
+}
+
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+.tblUserHeader div {
+    background-color: #F7F7F7;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.tblUserRows {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.failureNotification {
+    font-size: 1.2em;
+    color: Red;
+}
+
+.btn-delete {
+    width: 50%;
+}
+
+
+#Button1 {
+    width: 100px;
+}
+
+.changePasswordContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lblChangePassword {
+    width: 48%;
+}
+
+.btn-info {
+    color: #fff !important;
+}
+
+.summaryValContainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.changePassword {
+    width: 474px;
+}
+
+.recoverpassword .changePassword {
+    /*width: 100%;*/
+    text-align: center;
+}
+
+.recoverpassword .lblChangePassword {
+    width: 14%;
+}
+
+.changePassword input {
+    letter-spacing: 3px;
+}
+
+.changePassword legend {
+    text-align: center;
+}
+
+.successNotification {
+    font-size: 1.2em;
+    color: green;
+}
+
+
+.summaryValContainer ul {
+    padding-left: 1rem;
+}
+

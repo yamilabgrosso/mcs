@@ -1,0 +1,45 @@
+﻿body {
+}
+
+#header {
+    grid-area: image-header-area;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "logo-area titulo-area";
+    grid-template-columns: 20% auto;
+    background-color: green;
+    grid-template-rows: auto;
+}
+
+    #header #logo {
+        background-image: url("../images/logo.png");
+        background-size:contain;
+        background-repeat:no-repeat;
+        grid-area: logo-area;
+        background-color:red;
+        width: 100%;
+        height: 100%
+    }
+
+    #header #titulo {
+        grid-area: titulo-area;
+    }
+
+#loginpannel {
+    grid-area: login-container-area;
+}
+
+#footer {
+    grid-area: footer-area;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+        "image-header-area"
+        "login-container-area"
+        "footer-area";
+    grid-template-rows: 200px auto 100px;
+    grid-template-columns: auto;
+}
