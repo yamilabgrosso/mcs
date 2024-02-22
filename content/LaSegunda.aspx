@@ -53,16 +53,17 @@
 
             <section class="marcaSeguro">
                 <div class="ofrecimientoXMarca-page" id="irSeguros">
-                    <img src="images/lasegunda-principal.png" alt="La Segunda" class="logoPrincipal">
-                    <h1>Protegé tus<br> pertenencias</h1>
-                    <p>Todo lo que llevás dentro de tu cartera te importa y a nosotros también.
-                        ¿Qué cubre nuestro Seguro? El robo de tu bolso, y todos los objetos que lleves en él, dentro del
-                        país mediante el uso de violencia física, intimidación o fuerza.
+                    <img src="images/lasegunda-principal.png" alt="CNP" class="logoPrincipal">
+                    <h1>Protegé lo que te<br> lleva a todas partes</h1>
+                    <p>La bicicleta es mucho más que tu medio de transporte, es una herramienta 
+                        indispensable para tus responsabilidades diarias. Ya sea para ir al trabajo, 
+                        hacer las compras del día o cualquier compromiso.
+                        ¡No dejes que el miedo al robo te frene!                    
                     </p>
-                    <h2>Bolso protegido</h2>
+                    <h2>Seguro de Movilidad</h2>
                     <p class="info" data-bs-toggle="modal" data-bs-target="#pertenenciasModal">+info</p>
                     <hr class="b-gradiente">
-                    <p class="precio">Precio promocional: <b class="number">$926</b> mensuales.</p>
+                    <p class="precio">Tenelo desde <b class="number">$1500</b> y movete con tranquilidad</p>
                     <hr class="b-gradiente">
                 </div>
             </section>

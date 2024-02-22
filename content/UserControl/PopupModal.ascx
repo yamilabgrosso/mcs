@@ -207,43 +207,30 @@
                             aria-label="Close">
                         </button>
                     </div>
-                    <div class="modal-body">
+                     <div class="modal-body">
                         <div class="flex-c-center">
                             <img class="logoModal" src="images/la-segunda-seguros.png" alt="Logo la segunda seguros">
                             <hr>
-                            <img class="iconoModal2" src="images/bolso-azul.png" alt="Bolso azul">
-                            <h2>Protegé tus pertenencias</h2>
+                            <img class="iconoModal2" src="images/bici-azul.png" alt="Bicicleta">
+                            <h2>Protegé tu bicicleta</h2>
                         </div>
-                        <p>Al mundo no debería importarle lo que llevas en tu cartera. Si te importa a vos, nosotros te lo cubrimos. ¿Qué me cubre? El robo de tu bolso y todos los objetos que lleves en él, dentro y fuera del país, mediante el uso de violencia física, intimidación o fuerza.</p>
-                        <h3>Bolso Protegido</h3>
-                        <p>Una práctica solución para proteger tu bolso, asegurando el robo total del bien declarado en
-                            póliza. La suma máxima asegurada es de $35.000.
+                        
+                        <h3>Seguro de Movilidad</h3>
+                        <p><b>¿Qué te cubre?</b>
                             <br><br>
-                            Coberturas y sumas aseguradas:<br>
-                            Bolso contenedor: $5.000<br>
-                            Dinero en efectivo: $4.000<br>
-                            Lentes recetados/de contacto: $4.000<br>
-                            Lentes de sol: $3.000<br>
-                            Cosméticos/perfumes: $2.000<br>
-                            Celular/reproductor de audio: $7.500<br>
-                            Reembolso de llaves: $3.000<br>
-                            Reembolso de documentos: $3.000<br>
-                            Gastos de movilidad o traslado: $3.500<br>
-                            <br><br>
-                            Excluye: hurto, extravío o desaparición, cuando los bienes no se encuentran bajo la custodia
-                            directa de la persona asegurada.
-                            <br><br>
-                            <b>¿Tengo cobertura si me roban el bolso en el exterior?</b><br>
-                            Este seguro te cubre dentro y fuera del país, ante el robo de tu bolso y todos los objetos
-                            que lleves en él, mediando el uso de violencia física, intimidación o fuerza.<br><br>
-                            <b>¿Qué plazo tengo para hacer la denuncia?</b><br>
-                            Si bien tenés un plazo de 72 hs. para hacer la Denuncia Policial, te recomendamos efectuarla
-                            de inmediato en la seccional más cercana. Recordá incluir en la denuncia un detalle de los
-                            bienes robados.
+                            - Robo total  a valor del rodado y hasta $500.000.<br>
+                            - Responsabilidad Civil ciclista hasta $300.000.<br>
+                            - Servicio de asistencia sin cargo, las 24 hs,  los 365 días del año, y hasta un radio de 50 Km.<br>
+                            - Traslado en caso de rotura de la bicicleta.<br>
+                            - Auxilio por rotura de neumático.<br>
+                            - Asistencia en caso de robo de la bicicleta en la vía pública.<br>
+                            - Gastos médicos en caso de sufrir daños como consecuencia del robo de la bicicleta.<br><br>
+
 
                         </p>
                     </div>
-                    <button class="btn type-orange button-loquiero" data-insurance="LASEGUNDA" data-bs-dismiss="modal"><a  data-insurance="LASEGUNDA">LO QUIERO</a></button>
+
+                    <a href="mailto:l2online@lasegunda.com.ar" class="btn type-orange button-loquiero">LO QUIERO</a>
                 </div>
             </div>
         </div>
