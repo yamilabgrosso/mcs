@@ -212,7 +212,7 @@
                             <img class="logoModal" src="images/la-segunda-seguros.png" alt="Logo la segunda seguros">
                             <hr>
                             <img class="iconoModal2" src="images/bici-azul.png" alt="Bicicleta">
-                            <h2>Protegé tu bicicleta</h2>
+                            <h2>Protegé lo que te lleva a todas partes</h2>
                         </div>
                         
                         <h3>Seguro de Movilidad</h3>
