@@ -23,7 +23,7 @@
                             </li>
                             <li><a class="dropdown-item" href="/Rus">Seguro de Hogar</a>
                             </li>
-                            <li><a class="dropdown-item" href="/LaSegunda">Seguro de Movilidad</a>
+                            <li><a class="dropdown-item" href="/LaSegunda">Seguro de Bicicleta</a>
                             </li>
                         </ul>
                     </li>

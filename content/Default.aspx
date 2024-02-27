@@ -126,7 +126,7 @@
                                 <img src="Images/lasegunda.png" alt="La Segunda Seguros">
                             </div>
                             <h2>Protegé lo que te lleva a todas partes</h2>
-                            <h3>Seguro de Movilidad</h3>
+                            <h3>Seguro de Bicicleta</h3>
                             <p>Más info</p>
 
                         </div>

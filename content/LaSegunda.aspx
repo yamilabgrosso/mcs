@@ -60,7 +60,7 @@
                         hacer las compras del día o cualquier compromiso.
                         ¡No dejes que el miedo al robo te frene!                    
                     </p>
-                    <h2>Seguro de Movilidad</h2>
+                    <h2>Seguro de Bicicleta</h2>
                     <p class="info" data-bs-toggle="modal" data-bs-target="#pertenenciasModal">+info</p>
                     <hr class="b-gradiente">
                     <p class="precio">Tenelo desde <b class="number">$1500</b> y movete con tranquilidad</p>
@@ -73,20 +73,27 @@
             <div class="waveIndex waveIndexForm"></div>
 
             <section class="formulario" id="irForm">
-                <h2>CONTRATÁ TU SEGURO</h2>
-                <p>Dejanos tus datos y nos contactaremos con vos</p>
-
+                <h2>Contratá tu seguro</h2>
+                <p>Dejanos tus datos y nos contactaremos con vos.</p>
+    
                 <form>
-
+    
                     <div class="mb-3" data-form-info="name">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" maxlength="50" data-minlength="2" class="form-control" id="nombre"
                             aria-describedby="emailHelp" data-required='Y'>
                     </div>
+    
+                    <div class="mb-3" data-form-info="surname">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" maxlength="50" data-minlength="2" class="form-control" id="apellido"
+                            aria-describedby="emailHelp" data-required='Y'>
+                    </div>
+    
+    
                     <div class="mb-3" data-form-info="province">
                         <label for="provincia" class="form-label">Provincia</label>
-                        <select class="form-select" id="provincia" aria-label="Default select example"
-                            data-required='Y'>
+                        <select class="form-select" id="provincia" aria-label="Default select example" data-required='Y'>
                             <option value="" selected></option>
                             <option value="1">Buenos Aires</option>
                             <option value="2">Ciudad Autónoma de Buenos Aires</option>
@@ -108,19 +115,19 @@
                             <option value="18">San Juan</option>
                             <option value="19">San Luis</option>
                             <option value="20">Santa Cruz</option>
-                            <option value="21">Santa Fé</option>
+                            <option value="21">Santa Fe</option>
                             <option value="22">Santiago del Estero</option>
                             <option value="23">Tierra del Fuego</option>
                             <option value="24">Tucumán</option>
                         </select>
                     </div>
-
+    
                     <div class="mb-3" data-form-info="city">
                         <label for="localidad" class="form-label">Localidad</label>
                         <input type="text" maxlength="50" data-minlength="2" class="form-control" id="ciudad"
                             aria-describedby="emailHelp" data-required='Y'>
                     </div>
-
+    
                     <div class="mb-3" data-form-info="channel">
                         <label for="exampleInputEmail1" class="form-label">¿Por qué medio preferís que te
                             contactemos?</label>
@@ -130,16 +137,17 @@
                             <option value="3">Mail</option>
                         </select>
                     </div>
-
-
+    
+    
                     <div class="mb-3" data-form-info="numberemail">
                         <label for="numeroContacto" class="form-label">Pasanos tu número para contactarte</label>
                         <input type="text" maxlength="255" class="form-control" id="numeroContacto"
                             aria-describedby="emailHelp" data-required='Y' data-minlength="2">
                     </div>
-
-                    <button type="button" class="btn fs-lg type-blue">ENVIAR</button>
-
+    
+                    <a href="thankYouRusLaSegunda.html"><button type="button"
+                            class="btn fs-lg type-blue">ENVIAR</button></a>
+    
                 </form>
             </section>
 
@@ -161,7 +169,7 @@
 
                     <div>
                         <hr class="b-gradiente w-100">
-                        <p class="precio">¡Únicos, accesibles, superadores!</p>
+                        <p class="precio">Únicos, accesibles y superadores</p>
                         <hr class="b-gradiente w-100">
                     </div>
                     <p class="text-marcas">

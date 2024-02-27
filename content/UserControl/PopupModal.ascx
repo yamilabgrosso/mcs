@@ -215,7 +215,7 @@
                             <h2>Protegé lo que te lleva a todas partes</h2>
                         </div>
                         
-                        <h3>Seguro de Movilidad</h3>
+                        <h3>Seguro de Bicicleta</h3>
                         <p><b>¿Qué te cubre?</b>
                             <br><br>
                             - Robo total  a valor del rodado y hasta $500.000.<br>
